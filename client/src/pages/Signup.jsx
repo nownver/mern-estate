@@ -32,9 +32,11 @@ export default function Signup() {
         setError(data.message);
         return;
       }
-      setLoading(false);
-      setError(null);
-      navigate('/sign-in');
+      else {
+        setLoading(false);
+        setError(null);
+        navigate('/sign-in');
+      }
     } catch (error) {
       setLoading(false);
       setError(error.message);
